@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Page styles - make your own! -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+      <!-- JS -->
+      <script src="./script.js"></script>
+
+  <style>
+        h4 {
+            color: #000000;
+            text-align: center;
+            text-decoration: underline;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: xx-large;
+            font-weight: bold;
+            text-decoration-color: gray;
+        }
+
+        h1 {
+            color: #000000;
+            text-align: center;
+            text-decoration: wavy;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 600;
+            text-decoration-color: aliceblue;
+        }
+
+        p {
+            color: #000000;
+            text-align: center;
+            font-size: 12px;
+            font-style: bold;
+            font: arial
+        }
+
+        .container {
+            position: relative;
+            height: 300px;
+            background-image: url(images/carbanner2.jpg);
+            background-size: cover;
+        }
+
+
+        .text-block {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            color: black;
+            padding: 0px;
+            font-size: 35px;
+          }
+
+        h1 {
+            font-family: 'Bungee Spice', cursive;
+        }
+
+        .card {
+            box-shadow:
+                2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+                6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+                12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+                22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+                41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+                100px 100px 80px rgba(0, 0, 0, 0.07);
+
+            border: none;
+        }
+
+        input {
+            text-decoration: none !important;
+            outline: 0 !important;
+            box-shadow: none !important;
+            border-color: #6f42c1 !important;
+        }
+
+        .input-group-text {
+            border-color: #6f42c1 !important;
+            background-color: #6f42c1 !important;
+            color: #fff !important;
+        }
+
+        .btn {
+            color: #fff !important;
+            text-decoration: none !important;
+            outline: 0 !important;
+            box-shadow: none !important;
+            background-color: #6f42c1 !important;
+        }
+
+        .btn:hover {
+            background-color: #61428f !important;
+        }
+
+        .spinner {
+            color: #6f42c1 !important;
+            font-size: larger;
+            width: 3rem !important;
+            height: 3rem !important;
+        }
+    </style>
+</head>
+
+<body style="background-color: lightgrey;">
+     <header class="header">
+        <table width="100%">
+            <tr>
+                <td>
+                    <div class="logo">
+                        <div class="container">
+                            <div class="text-block">
+                                <!--<img src="images/carbanner2.jpg", width="100%", height="400px">-->
+                                <h1>v4 MotorZ</h1>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <nav class="navbar">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="car.html">Cars</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="location.html">Location</a>
+                        <a href="loan.html">Loan estimator</a>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+</header>
+
+<table style="width:100%">
+<tr>
+    <td>
+        <div class="containers">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card card-body text-center mt-5">
+                        <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+                        <form id="loan-form">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <div class="input-group">
+                                    <span class="input-group-text">%</span>
+                                    <input type="number" class="form-control" id="interest" placeholder="Interest">
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="number" class="form-control" id="years" placeholder="Years to repay">
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="submit" value="Calculate" class="btn">
+                            </div>
+                        </form>
+
+                        <div id="loading">
+                            <div class="spinner-border spinner d-flex justify-content-center mx-auto mt-5"
+                                role="status">
+                            </div>
+                        </div>
+
+                        <div id="results" class="pt-4">
+                            <hr>
+                            <h5 class="text-center">Result</h5>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">Total Payment</span>
+                                    <input type="number" class="form-control" id="total-payment" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <div class="input-group">
+                                    <span class="input-group-text">Monthly Payment</span>
+                                    <input type="number" class="form-control" id="monthly-payment" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <div class="input-group">
+                                    <span class="input-group-text">Total Interest</span>
+                                    <input type="number" class="form-control" id="total-interest" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </td>
+</tr>
+</table>
+
+    <script>
+        const form = document.getElementById('loan-form');
+
+        form.addEventListener('submit', function (e) {
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('loading').style.display = 'block';
+            setTimeout(calculateResults, 2000);
+            e.preventDefault();
+        });
+
+        function calculateResults(e) {
+            console.log('Calculating...');
+            const amount = document.getElementById('amount');
+            const interest = document.getElementById('interest');
+            const years = document.getElementById('years');
+            const monthlyPayment = document.getElementById('monthly-payment');
+            const totalPayment = document.getElementById('total-payment');
+            const totalInterest = document.getElementById('total-interest');
+
+            const principal = parseFloat(amount.value);
+            const calculatedInterest = parseFloat(interest.value) / 100 / 12;
+            const calculatedPayments = parseFloat(years.value) * 12;
+
+            const x = Math.pow(1 + calculatedInterest, calculatedPayments);
+            const monthly = (principal * x * calculatedInterest) / (x - 1);
+
+            // Check whether it is Finite or not
+            if (isFinite(monthly)) {
+                monthlyPayment.value = monthly.toFixed(2); // 2 decimal places
+                totalPayment.value = (monthly * calculatedPayments).toFixed(2);
+                totalInterest.value = ((monthly * calculatedPayments) - principal).toFixed(2);
+                document.getElementById('results').style.display = 'block';
+                document.getElementById('loading').style.display = 'none';
+            } else {
+                showError('Please check your numbers');
+            }
+            e.preventDefault();
+        }
+
+        function showError(error) {
+            // Hide results
+            document.getElementById('results').style.display = 'none';
+
+            // Hide Loader
+            document.getElementById('loading').style.display = 'none';
+
+            // Show error
+            const errorDiv = document.createElement('div');
+
+            // Get elements
+            const card = document.querySelector('.card');
+            const heading = document.querySelector('.heading');
+
+            // Add class
+            errorDiv.className = 'alert alert-danger';
+
+            // Create text node and append to div
+            errorDiv.appendChild(document.createTextNode(error));
+
+            // Insert error above heading
+            card.insertBefore(errorDiv, heading);
+
+            // Clear error after 3 seconds
+            setTimeout(clearError, 3000);
+        }
+
+        function clearError() {
+            document.querySelector('.alert').remove();
+        }
+    </script>
+</body>
+
+</html>

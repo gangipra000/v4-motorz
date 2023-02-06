@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Page styles - make your own! -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    *,*:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    .column {
+      float: left;
+      width: 33.3%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+    }
+
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .containers {
+      padding: 0 16px;
+      color: white;
+    }
+
+    .containers::after,
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .title {
+      color: white;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+
+
+    h1 {
+       color: #000000;
+      text-align: center;
+      text-decoration: wavy;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: 600;
+      text-decoration-color: aliceblue;
+    }
+
+    h4 {
+      color: #000000;
+      text-align: center;
+      text-decoration: underline;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: xx-large;
+      font-weight: bold;
+      text-decoration-color: gray;
+    }   
+
+    p {
+      color: #000000;
+      text-align: center;
+      font-size: 12px;
+      font-style: bold;
+      font: arial
+  } 
+
+  .container {
+    position: relative;
+    height: 450px;
+    background-image: url(images/carbanner2.jpg);
+    background-size: cover;
+  }
+  .text-block {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    color: black;
+    padding: 0px;
+    font-size: 35px;
+  }
+
+
+  h1 {
+    font-family: 'Bungee Spice', cursive;
+}
+  </style>
+
+  <!-- These provide in-browser transpilation of ES6 JS code to ES5 to support IE11 -->
+  <script src="https://unpkg.com/@babel/polyfill@7.6.0/dist/polyfill.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body style="background-color: rgb(40, 53, 116);">
+
+
+  <header class="header">
+    <table width="100%">
+      <tr>
+          <td>
+              <div class="logo">
+                  <div class="container">
+                      <div class="text-block">
+                          <!--<img src="images/carbanner2.jpg", width="100%", height="400px">-->
+                          <h1>v4 MotorZ</h1>
+                      </div>
+                  </div>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <nav class="navbar">
+                  <a href="index.html">Home</a>
+                  <a href="about.html" a.>About</a>
+                  <a href="car.html">Cars</a>
+                  <a href="contact.html">Contact</a>
+                  <a href="location.html">Location</a>
+                  <a href="loan.html">Loan estimator</a>
+              </nav>
+          </td>
+      </tr>
+  </table>
+
+  </header>
+
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="images/chevy.webp" alt="Jane" style="width:100%">
+        <div class="containers">
+          <h2>Chevrolet Silverado 1500 Work Truck</h2>
+          <p class="title">2010</p>
+          <p>64,870 miles</p>
+          <p>$13,965</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="images/honda.webp" alt="Mike" style="width:100%">
+        <div class="containers">
+          <h2>Honda CR-V EX</h2>
+          <p class="title">2011</p>
+          <p>149,448 miles</p>
+          <p>$10,911</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="images/hyundai.webp" alt="John" style="width:100%">
+        <div class="containers">
+          <h2>Hyundai Santa Fe GLS</h2>
+          <p class="title">2005</p>
+          <p>159,863 miles</p>
+          <p>$3950</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/conversation.js"></script>
+  <script type="text/babel" data-presets="es2015,es2016,es2017" src="scripts/peekobot.js"></script>
+
+  <footer>
+      <p>Copyright PAAR Inc. 2023</p>
+  </footer>
+
+</body>
+
+</html>
